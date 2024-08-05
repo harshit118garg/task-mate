@@ -1,0 +1,60 @@
+.inputContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  
+  .inputFieldWrapper {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+
+    .inputField {
+      min-width: 300px;
+      font-size: 1rem;
+      padding: 0.75rem;
+      width: 100%;
+      border: 2px solid lighten(#000, 75%);
+      border-radius: 5px;
+      transition: border 0.25s ease-in-out;
+
+      &:focus {
+        outline: none;
+        border: 2px solid #000;
+      }
+    }
+
+    .inputLabel {
+      text-transform: capitalize;
+      position: absolute;
+      pointer-events: none;
+      top: 1.25rem;
+      left: 10px;
+      padding-left: 4px;
+      transform: translateY(-50%);
+      transition: all 0.2s ease-in-out;
+    }
+
+    .inputField:focus ~ .inputLabel,
+    .inputFieldTouched ~ .inputLabel {
+      top: 0;
+      left: 4px;
+      background-color: #f6f6f6;
+      font-size: 14px;
+      padding: 0 10px;
+    }
+    .inputFieldError {
+      border: 2px solid rgb(255 34 34 / 75%);
+    }
+  }
+  
+  .errorMessage {
+    margin: unset;
+    color: red;
+    font-size: 1rem;
+    width: 100%;
+    display: flex;
+  }
+}

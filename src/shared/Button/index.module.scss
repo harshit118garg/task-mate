@@ -1,0 +1,42 @@
+.buttonWrapper {
+  width: 100%;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+
+  button {
+    padding: 0.75rem;
+    font-size: 1.5rem;
+    font-weight: 700;
+    cursor: pointer;
+    border-radius: 4px;
+    border: none;
+    outline: none;
+    background-color: #959595;
+    transition-property: background-color, color;
+    transition-duration: 0.3s;
+    transition-timing-function: ease;
+
+    &:hover {
+      background-color: black;
+      color: white;
+    }
+
+    &:focus {
+      border: 0 solid #3b3b3b;
+      border-width: 0 2px 2px;
+    }
+
+    &:disabled {
+      background-color: #3a3a3a;
+      color: white;
+      cursor: wait;
+    }
+  }
+
+  &.fullHeight {
+    button {
+      width: 100%;
+    }
+  }
+}
